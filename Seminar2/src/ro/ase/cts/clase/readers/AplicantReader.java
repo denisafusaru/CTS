@@ -18,7 +18,7 @@ public abstract class AplicantReader {
 	
 	//in functie de campuri comune
 	//scanner e streamul catre fisier
-	public Aplicant readAplicant(Scanner scanner, Aplicant aplicant ) { 
+	public void readAplicant(Scanner scanner, Aplicant aplicant ) { 
 		String nume = scanner.next();
 		String prenume = scanner.next();
 		int varsta = scanner.nextInt();
@@ -32,7 +32,6 @@ public abstract class AplicantReader {
 		aplicant.setPunctaj(punctaj);
 		aplicant.setDenumiriProiecte(nr,vect);
 		aplicant.setVarsta(varsta);
-		return aplicant;
 		
 	}
 	
