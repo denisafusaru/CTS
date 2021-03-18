@@ -26,7 +26,7 @@ public abstract class Aplicant{
 	public String getPrenume() {
 		return prenume;
 	}
-	public void setPrenume(String prenume) {
+	public void setPrenume(String prenume) { 
 		this.prenume = prenume;
 	}
 	public int getVarsta() {
