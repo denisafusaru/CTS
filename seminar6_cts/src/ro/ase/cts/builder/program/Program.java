@@ -2,6 +2,7 @@ package ro.ase.cts.builder.program;
 
 import ro.ase.cts.builder.clase.Rezervare;
 import ro.ase.cts.builder.clase.RezervareBuilder;
+import ro.ase.cts.builder.clase.RezervareBuilderV2;
 
 public class Program {
 
@@ -23,6 +24,14 @@ public class Program {
 		
 		System.out.println(rezervare5);
 		System.out.println(rezervare6);
+		
+		//nu mai avem shallow copy
+		RezervareBuilderV2 builderV2 = new RezervareBuilderV2().setAreBauturaInclusa(true).setAreMancareInclusa(true).setAreMuzicaAmbientala(true);
+		Rezervare rezervare7 = builderV2.setCodRezervare(100).build();
+		Rezervare rezervare8 = builderV2.setCodRezervare(101).build();
+		
+		System.out.println(rezervare7);
+		System.out.println(rezervare8);
 	}
 
 }
