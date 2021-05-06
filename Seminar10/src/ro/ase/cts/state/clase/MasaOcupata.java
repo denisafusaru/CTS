@@ -6,13 +6,13 @@ public class MasaOcupata implements Stare{
 	public void modificaStare(Masa masa) {
 		
 		if(masa.getStareMasa() instanceof MasaOcupata) {
-			System.out.println("Masa nu se poate ocupa");
+			System.out.println("Masa cu nr: " + masa.getNrMasa() + " nu se poate ocupa");
 		}
 		else {
 			masa.setStareMasa(this);
-			System.out.println("Masa");
+			System.out.println("Masa cu nr: " + masa.getNrMasa() + " s-a ocupat");
 		}
+		
 	}
-	
 
 }
