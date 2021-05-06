@@ -13,6 +13,7 @@ public abstract class Cont {
 	
 	public float getSold() {
 		return sold;
+		
 	}
 
 	public void setSold(float sold) {

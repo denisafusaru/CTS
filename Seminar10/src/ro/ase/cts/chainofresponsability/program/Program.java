@@ -16,6 +16,7 @@ public class Program {
 		contCurent.setSuccesor(contEconomii);
 		contEconomii.setSuccesor(contCreditCont);
 		
+		
 		contCurent.plateste(50);
 		contCurent.plateste(140);
 		contCurent.plateste(50);

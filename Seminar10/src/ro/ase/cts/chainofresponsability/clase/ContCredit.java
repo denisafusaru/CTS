@@ -7,6 +7,7 @@ public class ContCredit extends Cont {
 		
 	}
 
+	
 	@Override
 	public void plateste(float suma) {
 		if(super.getSold()>suma) {

@@ -6,6 +6,7 @@ public class ContEconomii extends Cont {
 		super(sold);
 	}
 
+	
 	@Override
 	public void plateste(float suma) {
 		if(super.getSold()>suma) {
