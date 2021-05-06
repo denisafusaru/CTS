@@ -7,18 +7,18 @@ public class ManagerComenzi {
 
 	private List<Comanda> comenzi;
 
-	public ManagerComenzi(List<Comanda> comenzi) {
+	public ManagerComenzi() {
 		super();
 		this.comenzi = new ArrayList<Comanda>();
 	}
 	
 	public void invoca(Comanda comanda) {
-		comenzi.add(comanda);
+		comenzi.add(comanda); // adauga la sf liste
 	}
 	
 	public void executaComanda() {
-		if(comenzi.isEmpty()) {
-			//comenzi.get(0).executa();
+		if(!comenzi.isEmpty()) {
+			comenzi.get(0).executa(); // o luam pe prima
 			comenzi.remove(0);
 		}
 	}
