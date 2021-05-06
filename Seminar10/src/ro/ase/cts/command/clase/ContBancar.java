@@ -5,10 +5,9 @@ public class ContBancar {
 	private String destinatar;
 	private float sold;
 	
-	public ContBancar(String destinatar, float sold) {
+	public ContBancar(String destinatar,float suma) {
 		super();
 		this.destinatar = destinatar;
-		this.sold = sold;
 	}
 	
 	public void constituire(float suma) {
