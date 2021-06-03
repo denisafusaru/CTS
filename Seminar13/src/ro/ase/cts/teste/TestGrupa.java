@@ -4,7 +4,11 @@ import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
+import ro.ase.cts.categorii.GetPromovabilitateCategory;
+import ro.ase.cts.categorii.TesteNormaleCategory;
+import ro.ase.cts.categorii.TesteUrgenteCategory;
 import ro.ase.cts.clase.Grupa;
 import ro.ase.cts.clase.Student;
 
@@ -48,6 +52,7 @@ public class TestGrupa {
 	//Performance 
 	
 	@Test(timeout = 500)
+	@Category(TesteUrgenteCategory.class)
 	public void testConstructorPerformanta() {
 		Grupa grupa = new Grupa(1070);	
 	}
@@ -55,6 +60,7 @@ public class TestGrupa {
 	//Correct - Existence
 	
 	@Test(timeout = 500)
+	@Category(TesteNormaleCategory.class)
 	public void testConstructorExistentaListaStudenti() {
 		Grupa grupa = new Grupa(1070);
 		assertNotNull(grupa.getStudenti());
@@ -63,6 +69,7 @@ public class TestGrupa {
 	//reluam principiile de la Right - BICEP pentru metoda getPromovabilitate
 	
 	@Test
+	@Category(GetPromovabilitateCategory.class)
 	public void testPromovabilitateRight() {
 		Grupa grupa = new Grupa(1083);
 		for(int i=0;i<3;i+=1) {
@@ -81,6 +88,7 @@ public class TestGrupa {
 	
 	//Boundary Conditions - 0 si 1 limitele extreme
 	@Test
+	@Category(GetPromovabilitateCategory.class)
 	public void testPromovabilitateLimitaInferioara() {
 		Grupa grupa = new Grupa(1083);
 		for(int i=0;i<3;i+=1) {
@@ -93,6 +101,7 @@ public class TestGrupa {
 	}
 	
 	@Test
+	@Category(GetPromovabilitateCategory.class)
 	public void testPromovabilitateLimitaSuperioara() {
 		Grupa grupa = new Grupa(1083);
 		for(int i=0;i<7;i+=1) {
@@ -108,6 +117,7 @@ public class TestGrupa {
 	//Daca nu avem niciun student in lista
 	
 	@Test(expected=IndexOutOfBoundsException.class)
+	@Category(GetPromovabilitateCategory.class)
 	public void testPromovabilitateErrorConditions() {
 		Grupa grupa = new Grupa(1083);
 		grupa.getPromovabilitate();
